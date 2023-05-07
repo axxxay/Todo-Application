@@ -1,0 +1,65 @@
+POST http://localhost:3005/register/
+Content-Type: application/json
+
+{
+    "username": "neveryash",
+    "name": "Yashwanth Bingi",
+    "password": "yash69420"
+}
+
+###
+
+POST http://localhost:3005/login/
+Content-Type: application/json
+
+{
+    "username": "akshay69",
+    "password": "Akshay123"
+}
+
+###
+
+GET http://localhost:3005/todos/
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImFrc2hheTY5IiwiaWF0IjoxNjgxNDczNDE1fQ.HcHEWgcDEqeH3S9bE_dFZeJPCsXiyLcbGR3YXpMWv_U
+
+###
+
+POST http://localhost:3005/todos/create/
+Content-Type: application/json
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImFrc2hheTY5IiwiaWF0IjoxNjgxNDczNDE1fQ.HcHEWgcDEqeH3S9bE_dFZeJPCsXiyLcbGR3YXpMWv_U
+
+{
+    "todo": "Play Cricket",
+    "priority": 7,
+    "status": "COMPLETED"
+}
+
+###
+
+GET http://localhost:3005/todos/report/
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImFrc2hheTY5IiwiaWF0IjoxNjgxNDczNDE1fQ.HcHEWgcDEqeH3S9bE_dFZeJPCsXiyLcbGR3YXpMWv_U
+
+###
+
+DELETE http://localhost:3005/todos/delete/13/
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImFrc2hheTY5IiwiaWF0IjoxNjgxNDczNDE1fQ.HcHEWgcDEqeH3S9bE_dFZeJPCsXiyLcbGR3YXpMWv_U
+
+###
+
+GET http://localhost:3005/todos/status/
+Content-Type: application/json
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImFrc2hheTY5IiwiaWF0IjoxNjgxNDczNDE1fQ.HcHEWgcDEqeH3S9bE_dFZeJPCsXiyLcbGR3YXpMWv_U
+
+{
+    "status": "PENDING"
+}
+
+###
+
+PUT http://localhost:3005/todos/status/update/24/
+Content-Type: application/json
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImFrc2hheTY5IiwiaWF0IjoxNjgxNDczNDE1fQ.HcHEWgcDEqeH3S9bE_dFZeJPCsXiyLcbGR3YXpMWv_U
+
+{
+    "status": "COMPLETED"
+}
